@@ -13,8 +13,6 @@ import { Options, Vue } from "vue-class-component";
   },
 })
 export default class Greeting extends Vue {
-   msg!: string;
+  msg!: string;
 }
-
-
 </script>
