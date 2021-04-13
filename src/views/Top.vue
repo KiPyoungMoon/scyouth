@@ -6,12 +6,10 @@
 import Sign from "@/components/top/Sign.vue";
 
 export default {
-components: {
+  components: {
     Sign,
   },
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

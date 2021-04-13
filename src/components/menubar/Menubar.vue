@@ -17,9 +17,13 @@
         <transition name="fade">
           <ul v-if="menuFacility" v-on:click="menuFacility = false">
             <li><router-link to="/facility/lodgment">숙박시설</router-link></li>
-            <li><router-link to="/facility/education">교육시설</router-link></li>
+            <li>
+              <router-link to="/facility/education">교육시설</router-link>
+            </li>
             <li><router-link to="/facility/exercise">운동시설</router-link></li>
-            <li><router-link to="/facility/youthHotel">유스호텔</router-link></li>
+            <li>
+              <router-link to="/facility/youthHotel">유스호텔</router-link>
+            </li>
             <li><router-link to="/facility/camping">캠핑장</router-link></li>
           </ul>
         </transition>
@@ -28,8 +32,12 @@
         <router-link to="/reservation">시설이용 예약</router-link>
         <transition name="fade">
           <ul v-if="menuReservation" v-on:click="menuReservation = false">
-            <li><router-link to="/reservation/retreat">수련원 예약</router-link></li>
-            <li><router-link to="/reservation/camping">캠핑장 예약</router-link></li>
+            <li>
+              <router-link to="/reservation/retreat">수련원 예약</router-link>
+            </li>
+            <li>
+              <router-link to="/reservation/camping">캠핑장 예약</router-link>
+            </li>
           </ul>
         </transition>
       </li>
@@ -49,9 +57,15 @@
         <router-link to="/sightseeingAround">주변관광</router-link>
         <transition name="fade">
           <ul v-if="menuSightseeingAround" v-on:click="menuSightseeingAround = false">
-            <li><router-link to="/sightseeingAround/suncheonBay">순천만</router-link></li>
-            <li><router-link to="/sightseeingAround/naganeupseong">낙안읍성</router-link></li>
-            <li><router-link to="/sightseeingAround/goindolPark">고인돌 공원</router-link></li>
+            <li>
+              <router-link to="/sightseeingAround/suncheonBay">순천만</router-link>
+            </li>
+            <li>
+              <router-link to="/sightseeingAround/naganeupseong">낙안읍성</router-link>
+            </li>
+            <li>
+              <router-link to="/sightseeingAround/goindolPark">고인돌 공원</router-link>
+            </li>
           </ul>
         </transition>
       </li>
@@ -59,8 +73,12 @@
         <router-link to="/transportationGuide">교통안내</router-link>
         <transition name="fade">
           <ul v-if="menuTransportationGuide" v-on:click="menuTransportationGuide = false">
-            <li><router-link to="/transportationGuide/wayToCome">오시는길</router-link></li>
-            <li><router-link to="/transportationGuide/directions">약도안내</router-link></li>
+            <li>
+              <router-link to="/transportationGuide/wayToCome">오시는길</router-link>
+            </li>
+            <li>
+              <router-link to="/transportationGuide/directions">약도안내</router-link>
+            </li>
           </ul>
         </transition>
       </li>
@@ -69,7 +87,6 @@
 </template>
 
 <script>
-
 import AboutForNav from "@/components/router/AboutForNav.vue";
 export default {
   components: {

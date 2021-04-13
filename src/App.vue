@@ -1,47 +1,50 @@
 <template>
   <Top />
   <Menubar />
-  <img alt="scyouth logo" v-bind:src="imageUrl" />
+  <img alt="scyouth backgroundImage" v-bind:src="imageUrl" />
   <router-view />
 </template>
 
 <script>
 import Menubar from "@/components/menubar/Menubar.vue";
 import Top from "@/views/Top.vue";
-import { } from "vue-router";
+import {} from "vue-router";
+// import { store } from "vuex";
+
 export default {
   components: {
     Menubar,
     Top,
   },
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
   data() {
     return {
       imageUrl: "mainBackgroundImage.jpg",
-    }
+    };
   },
   created() {
     this.setBackgroundImage();
   },
   watch: {
-    '$route': 'setBackgroundImage',
+    $route: "setBackgroundImage",
   },
   methods: {
     setBackgroundImage() {
       const path = this.getCurrentRoutePath();
       const urlString = path === "/" ? "mainBackgroundImage.jpg" : "contentBackgroundImage.jpg";
-      this.setImageUrl( urlString );
+      this.setImageUrl(urlString);
+      // this.$store.dispatch('setImg', {imgPath: urlString});
+      // this.setImageUrl();
     },
     getCurrentRoutePath() {
       return this.$route.path;
     },
-    setImageUrl( urlString ) {
-      this.imageUrl = require('./assets/' + urlString);
-    }
-  }
+    setImageUrl(urlString) {
+      this.imageUrl = require("./assets/" + urlString);
+    },
+    // setImageUrl() {
+    //   this.imageUrl = require("./assets/" + this.$store.getters.getImgUrl);
+    // },
+  },
 };
 </script>
 
