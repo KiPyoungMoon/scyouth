@@ -24,7 +24,7 @@ export default {
     }
   },
   created() {
-    this.setBackgroundImage()
+    this.setBackgroundImage();
   },
   watch: {
     '$route': 'setBackgroundImage',
