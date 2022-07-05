@@ -34,6 +34,16 @@ const routes = [
       },
     ],
   },
+  {
+    /**
+     * 외부링크 방법
+     */
+    path: "/example",
+    beforeEnter() {
+      //location.href = 'https://masilcamp.kr'
+      window.open("https://masilcamp.kr");
+    },
+  },
 ];
 
 const router = createRouter({

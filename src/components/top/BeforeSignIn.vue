@@ -3,6 +3,7 @@
     <ul class="signMenu">
       <li><router-link to="/signIn">로그인</router-link></li>
       <li><router-link to="/signUp">회원가입</router-link></li>
+      <li><router-link to="/example">참고 https://masilcamp.kr/</router-link></li>
     </ul>
   </div>
 </template>
